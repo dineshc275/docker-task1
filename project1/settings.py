@@ -81,27 +81,27 @@ WSGI_APPLICATION = 'project1.wsgi.application'
 # DB_HOST = os.environ['g_db_host']
 # DB_PASSWORD = os.environ['g_db_pw']
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ['db_name'],
-#         'USER': os.environ['db_user'],
-#         'PASSWORD': os.environ['db_pw'],
-#         'HOST': os.environ['db_host'],
-#         'PORT': os.environ['db_port'],
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "postgres-1",
-        'USER': "postgres",
-        'PASSWORD': "postgres",
-        'HOST': "localhost",
-        'PORT': 5432,
+        'NAME': os.environ['db_name'],
+        'USER': os.environ['db_user'],
+        'PASSWORD': os.environ['db_pw'],
+        'HOST': os.environ['db_host'],
+        'PORT': os.environ['db_port'],
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': "postgres-1",
+#         'USER': "postgres",
+#         'PASSWORD': "postgres",
+#         'HOST': "localhost",
+#         'PORT': 5432,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
